@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.foodiechef.api"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "foodie_chef",
+    "packageName": "com.foodiechef.api",
+    "packageFolder": "com/foodiechef/api",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MTIwMTRiMzIzNGNkNGE4NDk5M2FiYjRlMmY3ODhlYjUwYmFhODY0NDhlOGM5YjRkNDJjODU1YmI1ZGMyNGI3OWNjMWZjM2VhNTc3ZGZjM2Q5YzMwZGIyMzhiMWM5YTQ2N2YxM2RjODJjZDI3OTMxZWVhZDJmNGM0YzUyOGQwYTA=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}
