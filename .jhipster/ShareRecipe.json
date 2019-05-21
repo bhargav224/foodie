@@ -1,0 +1,44 @@
+{
+    "name": "ShareRecipe",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "shareRecipe",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "forSharedBy",
+            "relationshipName": "sharedBy",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "forSharedTo",
+            "relationshipName": "sharedTo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055735",
+    "entityTableName": "share_recipe",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

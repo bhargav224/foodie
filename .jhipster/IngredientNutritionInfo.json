@@ -1,0 +1,58 @@
+{
+    "name": "IngredientNutritionInfo",
+    "fields": [
+        {
+            "fieldName": "ingredientAmount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nutritionAmount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nutritionInformation",
+            "otherEntityRelationshipName": "ingredientNutritionInfo",
+            "relationshipName": "nutritionInformation",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ingredient",
+            "otherEntityRelationshipName": "ingredientNutritionInfo",
+            "relationshipName": "ingredient",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "measurement",
+            "otherEntityRelationshipName": "forNutritionUnit",
+            "relationshipName": "nutritionUnit",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "measurement",
+            "otherEntityRelationshipName": "forIngredientUnit",
+            "relationshipName": "ingredientUnit",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055743",
+    "entityTableName": "ingredient_nutrition_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

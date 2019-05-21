@@ -1,0 +1,51 @@
+{
+    "name": "ChefProfile",
+    "fields": [
+        {
+            "fieldName": "photo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "speciality",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "chefProfile",
+            "relationshipName": "userInfo",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190520055741",
+    "entityTableName": "chef_profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,175 @@
+{
+    "name": "Recipe",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "caloriesPerServings",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cookTime",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prepTime",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "published",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rating",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "readyIn",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "video",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "yields",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeHasStep",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeHasStep"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeImage",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeImage"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "menuRecipe",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "menuRecipe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeComment",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeComment"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeRating",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeRating"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "shareRecipe",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "shareRecipe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeLike",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeLike"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "footnote",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "footnote"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeIngredient",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "recipeIngredient"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "level",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "level",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "foodCategorie",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "foodCategorie",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cusine",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "cusine",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "recipe",
+            "relationshipName": "course",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055719",
+    "entityTableName": "recipe",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

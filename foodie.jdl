@@ -1,0 +1,185 @@
+// JDL definition for application 'foodie_chef' generated with command 'jhipster export-jdl'
+
+entity Recipe {
+  amount Double required,
+  caloriesPerServings Integer required,
+  cookTime Integer required,
+  description String required,
+  prepTime Integer required,
+  published Boolean required,
+  rating Integer required,
+  readyIn Integer required,
+  title String required,
+  video String required,
+  yields Integer required
+}
+entity RecipeStep {
+  instruction String required,
+  name String required,
+  path String required
+}
+entity RecipeHasStep
+entity RecipeImage {
+  imagePath String required
+}
+entity Level {
+  active Boolean required,
+  description String required
+}
+entity FoodCategorie {
+  active Boolean required,
+  category String required
+}
+entity Course {
+  active Boolean required,
+  description String required,
+  name String required
+}
+entity Cusine {
+  active Boolean required,
+  description String required,
+  name String required
+}
+entity MenuItem {
+  active Boolean required,
+  description String required,
+  imagePath String required,
+  name String required
+}
+entity Restaurant {
+  description String required,
+  imagePath String required,
+  name String required
+}
+entity Address {
+  city String required,
+  country String required,
+  state String required,
+  streetName String required,
+  zipCode Integer required
+}
+entity RestaurantMenu
+entity MenuRecipe
+entity UserInfo {
+  authenticated Boolean required,
+  contact Long required,
+  currentLoggedIn LocalDate required,
+  email String required,
+  emailConfirmationSentOn LocalDate required,
+  emailConfirmed Boolean required,
+  emailConfirmedOn LocalDate required,
+  lastLoggedIn LocalDate required,
+  firstName String required,
+  lastName String required,
+  password String required,
+  photo String required,
+  registeredOn LocalDate required
+}
+entity RecipeComment {
+  comment String required,
+  date LocalDate required
+}
+entity RecipeRating {
+  date LocalDate required,
+  rating Integer required
+}
+entity ShareRecipe {
+  date LocalDate required
+}
+entity RecipeLike {
+  date LocalDate required,
+  likes Integer required
+}
+entity Footnote {
+  footnote String required
+}
+entity InviteEmail {
+  email String required
+}
+entity InviteContact {
+  contact Long required
+}
+entity UserRating {
+  date LocalDate required,
+  rating Integer required
+}
+entity ChefProfile {
+  photo String required,
+  speciality String required,
+  type String required,
+  website String required
+}
+entity NutritionInformation {
+  active Boolean required,
+  nutrition String required
+}
+entity IngredientNutritionInfo {
+  ingredientAmount Double required,
+  nutritionAmount Double required
+}
+entity Measurement {
+  abbreviation String required,
+  active Boolean required
+}
+entity Ingredient {
+  ingredient String required,
+  active Boolean required
+}
+entity RecipeIngredient {
+  amount Double required,
+  ingredientNutritionValue Double required,
+  restriction String required
+}
+entity Role {
+  name String
+}
+entity UserInfoRole
+relationship OneToOne {
+  UserInfo{userInfo} to UserInfo{invitedBy},
+  UserInfo{chefProfile} to ChefProfile{userInfo}
+}
+relationship OneToMany {
+  Level{recipe} to Recipe{level},
+  FoodCategorie{recipe} to Recipe{foodCategorie},
+  Cusine{recipe} to Recipe{cusine},
+  Course{recipe} to Recipe{course},
+  Recipe{recipeHasStep} to RecipeHasStep{recipe},
+  RecipeStep{recipeHasStep} to RecipeHasStep{recipeStep},
+  Recipe{recipeImage} to RecipeImage{recipe},
+  FoodCategorie{menuItem} to MenuItem{foodCategorie},
+  Course{menuItem} to MenuItem{course},
+  Cusine{menuItem} to MenuItem{cusine},
+  Restaurant{address} to Address{restaurant},
+  MenuItem{restaurantMenu} to RestaurantMenu{menuItem},
+  Restaurant{restaurantMenu} to RestaurantMenu{restaurant},
+  Recipe{menuRecipe} to MenuRecipe{recipe},
+  MenuItem{menuRecipe} to MenuRecipe{menuItem},
+  Restaurant{userInfo} to UserInfo{restaurant},
+  Recipe{recipeComment} to RecipeComment{recipe},
+  UserInfo{recipeComment} to RecipeComment{userInfo},
+  Recipe{recipeRating} to RecipeRating{recipe},
+  UserInfo{recipeRating} to RecipeRating{userInfo},
+  Recipe{shareRecipe} to ShareRecipe{recipe},
+  UserInfo{forSharedBy} to ShareRecipe{sharedBy},
+  UserInfo{forSharedTo} to ShareRecipe{sharedTo},
+  Recipe{recipeLike} to RecipeLike{recipe},
+  UserInfo{recipeLike} to RecipeLike{userInfo},
+  Recipe{footnote} to Footnote{recipe},
+  UserInfo{footnote} to Footnote{userInfo},
+  UserInfo{inviteEmail} to InviteEmail{userInfo},
+  UserInfo{inviteContact} to InviteContact{userInfo},
+  UserInfo{forRateByUser} to UserRating{rateByUser},
+  UserInfo{forRateToUser} to UserRating{rateToUser},
+  NutritionInformation{ingredientNutritionInfo} to IngredientNutritionInfo{nutritionInformation},
+  Ingredient{ingredientNutritionInfo} to IngredientNutritionInfo{ingredient},
+  Measurement{forNutritionUnit} to IngredientNutritionInfo{nutritionUnit},
+  Measurement{forIngredientUnit} to IngredientNutritionInfo{ingredientUnit},
+  Recipe{recipeIngredient} to RecipeIngredient{recipe},
+  Measurement{recipeIngredient} to RecipeIngredient{measurement},
+  Ingredient{recipeIngredient} to RecipeIngredient{ingredient},
+  Role{userInfoRole} to UserInfoRole{role},
+  UserInfo{userInfoRole} to UserInfoRole{userInfo}
+}
+
+service Recipe, RecipeStep, RecipeHasStep, RecipeImage, Level, FoodCategorie, Course, Cusine, MenuItem, Restaurant, Address, RestaurantMenu, MenuRecipe, UserInfo, RecipeComment, RecipeRating, ShareRecipe, RecipeLike, Footnote, InviteEmail, InviteContact, UserRating, ChefProfile, NutritionInformation, IngredientNutritionInfo, Measurement, Ingredient, RecipeIngredient with serviceImpl
+filter Recipe, RecipeStep, RecipeHasStep, RecipeImage, Level, FoodCategorie, Course, Cusine, MenuItem, Restaurant, Address, RestaurantMenu, MenuRecipe, UserInfo, RecipeComment, RecipeRating, ShareRecipe, RecipeLike, Footnote, InviteEmail, InviteContact, UserRating, ChefProfile, NutritionInformation, IngredientNutritionInfo, Measurement, Ingredient, RecipeIngredient

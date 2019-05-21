@@ -1,0 +1,43 @@
+{
+    "name": "RecipeStep",
+    "fields": [
+        {
+            "fieldName": "instruction",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "path",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeHasStep",
+            "otherEntityRelationshipName": "recipeStep",
+            "relationshipName": "recipeHasStep"
+        }
+    ],
+    "changelogDate": "20190520055720",
+    "entityTableName": "recipe_step",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

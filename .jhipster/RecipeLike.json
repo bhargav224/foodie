@@ -1,0 +1,44 @@
+{
+    "name": "RecipeLike",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "likes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "recipeLike",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "recipeLike",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055736",
+    "entityTableName": "recipe_like",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

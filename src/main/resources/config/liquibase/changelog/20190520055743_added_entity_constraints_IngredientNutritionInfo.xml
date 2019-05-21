@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity IngredientNutritionInfo.
+    -->
+    <changeSet id="20190520055743-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="nutrition_information_id"
+                                 baseTableName="ingredient_nutrition_info"
+                                 constraintName="fk_ingredient_nutrition_info_nutrition_information_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nutrition_information"/>
+
+        <addForeignKeyConstraint baseColumnNames="ingredient_id"
+                                 baseTableName="ingredient_nutrition_info"
+                                 constraintName="fk_ingredient_nutrition_info_ingredient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ingredient"/>
+
+        <addForeignKeyConstraint baseColumnNames="nutrition_unit_id"
+                                 baseTableName="ingredient_nutrition_info"
+                                 constraintName="fk_ingredient_nutrition_info_nutrition_unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="measurement"/>
+
+        <addForeignKeyConstraint baseColumnNames="ingredient_unit_id"
+                                 baseTableName="ingredient_nutrition_info"
+                                 constraintName="fk_ingredient_nutrition_info_ingredient_unit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="measurement"/>
+
+    </changeSet>
+</databaseChangeLog>

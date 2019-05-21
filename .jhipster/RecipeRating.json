@@ -1,0 +1,44 @@
+{
+    "name": "RecipeRating",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rating",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "recipeRating",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "recipeRating",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055734",
+    "entityTableName": "recipe_rating",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

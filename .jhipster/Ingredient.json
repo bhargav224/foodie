@@ -1,0 +1,42 @@
+{
+    "name": "Ingredient",
+    "fields": [
+        {
+            "fieldName": "ingredient",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeIngredient",
+            "otherEntityRelationshipName": "ingredient",
+            "relationshipName": "recipeIngredient"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "ingredientNutritionInfo",
+            "otherEntityRelationshipName": "ingredient",
+            "relationshipName": "ingredientNutritionInfo"
+        }
+    ],
+    "changelogDate": "20190520055745",
+    "entityTableName": "ingredient",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

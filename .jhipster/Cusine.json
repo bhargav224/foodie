@@ -1,0 +1,49 @@
+{
+    "name": "Cusine",
+    "fields": [
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "cusine",
+            "relationshipName": "recipe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "menuItem",
+            "otherEntityRelationshipName": "cusine",
+            "relationshipName": "menuItem"
+        }
+    ],
+    "changelogDate": "20190520055726",
+    "entityTableName": "cusine",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

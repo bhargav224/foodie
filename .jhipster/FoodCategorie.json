@@ -1,0 +1,42 @@
+{
+    "name": "FoodCategorie",
+    "fields": [
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "category",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "foodCategorie",
+            "relationshipName": "recipe"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "menuItem",
+            "otherEntityRelationshipName": "foodCategorie",
+            "relationshipName": "menuItem"
+        }
+    ],
+    "changelogDate": "20190520055724",
+    "entityTableName": "food_categorie",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,44 @@
+{
+    "name": "UserRating",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rating",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "forRateByUser",
+            "relationshipName": "rateByUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "forRateToUser",
+            "relationshipName": "rateToUser",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055740",
+    "entityTableName": "user_rating",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -5,6 +5,55 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055719_added_entity_Recipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055720_added_entity_RecipeStep.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055721_added_entity_RecipeHasStep.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055722_added_entity_RecipeImage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055723_added_entity_Level.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055724_added_entity_FoodCategorie.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055725_added_entity_Course.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055726_added_entity_Cusine.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055727_added_entity_MenuItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055728_added_entity_Restaurant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055729_added_entity_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055730_added_entity_RestaurantMenu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055731_added_entity_MenuRecipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055732_added_entity_UserInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055733_added_entity_RecipeComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055734_added_entity_RecipeRating.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055735_added_entity_ShareRecipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055736_added_entity_RecipeLike.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055737_added_entity_Footnote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055738_added_entity_InviteEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055739_added_entity_InviteContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055740_added_entity_UserRating.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055741_added_entity_ChefProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055742_added_entity_NutritionInformation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055743_added_entity_IngredientNutritionInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055744_added_entity_Measurement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055745_added_entity_Ingredient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055746_added_entity_RecipeIngredient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520075641_added_entity_Role.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520075642_added_entity_UserInfoRole.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190520055719_added_entity_constraints_Recipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055721_added_entity_constraints_RecipeHasStep.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055722_added_entity_constraints_RecipeImage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055727_added_entity_constraints_MenuItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055729_added_entity_constraints_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055730_added_entity_constraints_RestaurantMenu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055731_added_entity_constraints_MenuRecipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055732_added_entity_constraints_UserInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055733_added_entity_constraints_RecipeComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055734_added_entity_constraints_RecipeRating.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055735_added_entity_constraints_ShareRecipe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055736_added_entity_constraints_RecipeLike.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055737_added_entity_constraints_Footnote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055738_added_entity_constraints_InviteEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055739_added_entity_constraints_InviteContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055740_added_entity_constraints_UserRating.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055743_added_entity_constraints_IngredientNutritionInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520055746_added_entity_constraints_RecipeIngredient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190520075642_added_entity_constraints_UserInfoRole.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ShareRecipe.
+    -->
+    <changeSet id="20190520055735-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="recipe_id"
+                                 baseTableName="share_recipe"
+                                 constraintName="fk_share_recipe_recipe_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="recipe"/>
+
+        <addForeignKeyConstraint baseColumnNames="shared_by_id"
+                                 baseTableName="share_recipe"
+                                 constraintName="fk_share_recipe_shared_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="shared_to_id"
+                                 baseTableName="share_recipe"
+                                 constraintName="fk_share_recipe_shared_to_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_info"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+{
+    "name": "InviteContact",
+    "fields": [
+        {
+            "fieldName": "contact",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "inviteContact",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055739",
+    "entityTableName": "invite_contact",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

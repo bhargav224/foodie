@@ -1,0 +1,29 @@
+{
+    "name": "MenuRecipe",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "menuRecipe",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "menuItem",
+            "otherEntityRelationshipName": "menuRecipe",
+            "relationshipName": "menuItem",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055731",
+    "entityTableName": "menu_recipe",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

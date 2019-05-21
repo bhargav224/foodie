@@ -1,0 +1,30 @@
+{
+    "name": "InviteEmail",
+    "fields": [
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "inviteEmail",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055738",
+    "entityTableName": "invite_email",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

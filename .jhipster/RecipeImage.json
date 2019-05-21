@@ -1,0 +1,30 @@
+{
+    "name": "RecipeImage",
+    "fields": [
+        {
+            "fieldName": "imagePath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "recipeImage",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055722",
+    "entityTableName": "recipe_image",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

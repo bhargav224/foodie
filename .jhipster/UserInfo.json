@@ -1,0 +1,203 @@
+{
+    "name": "UserInfo",
+    "fields": [
+        {
+            "fieldName": "authenticated",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "contact",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "currentLoggedIn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailConfirmationSentOn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailConfirmed",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailConfirmedOn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastLoggedIn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "photo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "registeredOn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "invitedBy",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "chefProfile",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "chefProfile",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "userInfoRole",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "userInfoRole"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeComment",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "recipeComment"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeRating",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "recipeRating"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "recipeLike",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "recipeLike"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "footnote",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "footnote"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "shareRecipe",
+            "otherEntityRelationshipName": "sharedBy",
+            "relationshipName": "forSharedBy"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "shareRecipe",
+            "otherEntityRelationshipName": "sharedTo",
+            "relationshipName": "forSharedTo"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "inviteEmail",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "inviteEmail"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "inviteContact",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "inviteContact"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "userRating",
+            "otherEntityRelationshipName": "rateByUser",
+            "relationshipName": "forRateByUser"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "userRating",
+            "otherEntityRelationshipName": "rateToUser",
+            "relationshipName": "forRateToUser"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "invitedBy",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "restaurant",
+            "otherEntityRelationshipName": "userInfo",
+            "relationshipName": "restaurant",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055732",
+    "entityTableName": "user_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

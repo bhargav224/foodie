@@ -1,0 +1,29 @@
+{
+    "name": "UserInfoRole",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "role",
+            "otherEntityRelationshipName": "userInfoRole",
+            "relationshipName": "role",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userInfo",
+            "otherEntityRelationshipName": "userInfoRole",
+            "relationshipName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520075642",
+    "entityTableName": "user_info_role",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

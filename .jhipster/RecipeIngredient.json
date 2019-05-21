@@ -1,0 +1,58 @@
+{
+    "name": "RecipeIngredient",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ingredientNutritionValue",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "restriction",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "recipe",
+            "otherEntityRelationshipName": "recipeIngredient",
+            "relationshipName": "recipe",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "measurement",
+            "otherEntityRelationshipName": "recipeIngredient",
+            "relationshipName": "measurement",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ingredient",
+            "otherEntityRelationshipName": "recipeIngredient",
+            "relationshipName": "ingredient",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190520055746",
+    "entityTableName": "recipe_ingredient",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
